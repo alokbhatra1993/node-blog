@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import cors from 'cors'
 // import authRoutes from './routes/authRoutes';
 import { json } from 'body-parser';
 import authRoutes from './routes/auth.routes';
@@ -9,7 +10,7 @@ import blogRoutes from './routes/blog.route';
 dotenv.config();
 
 const app = express();
-
+app.use(cors());
 app.use(json());
 
 // Connect to MongoDB

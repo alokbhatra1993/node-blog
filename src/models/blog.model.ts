@@ -13,7 +13,7 @@ const blogSchema: Schema = new Schema({
   //  this is _id from user table
   userId: { type: mongoose.Types.ObjectId, ref: "User", required: true },
   title: { type: String, required: true },
-  // image: { type: String, required: true },
+  image: { type: String, required: false },
   description: { type: String, required: true },
 });
 
