@@ -10,8 +10,8 @@ export const upload = multer({ storage: storage });
 
 export const addBlog = async (req: any, res: Response): Promise<void> => {
   try {
-    const file = req.file;
-    console.log("file", file);
+    const file = req.body.file;
+    console.log("file=========>", file);
     // console.log("user", req["user"])
     // req={
     //   body:{
